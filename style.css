@@ -191,17 +191,39 @@ body {
 }
 
 /* ==============================
-   CLICKABLE PROFILE PHOTO
+   EXACT 2x2 PROFILE PHOTO
 ================================ */
 
 .photo-container {
+    width: 600px;
+    height: 600px;
+
     cursor: pointer;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+
     transition: transform 0.3s ease;
 }
 
 .photo-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
+
+.photo-container img {
+    width: 600px;
+    height: 600px;
+
+    object-fit: cover;
+
+    aspect-ratio: 1 / 1;
+}
+
 
 /* ==============================
    IMAGE MODAL
@@ -232,13 +254,19 @@ body {
     display: flex;
 }
 
-/* Enlarged Image */
+
+/* Enlarged 2x2 Image */
 
 .image-modal img {
-    max-width: 90%;
+    width: 600px;
+    height: 600px;
+
+    max-width: 90vw;
     max-height: 80vh;
 
-    object-fit: contain;
+    object-fit: cover;
+
+    aspect-ratio: 1 / 1;
 
     border-radius: 15px;
 
@@ -250,7 +278,10 @@ body {
     animation: imageZoom 0.3s ease;
 }
 
-/* Close Button */
+
+/* ==============================
+   CLOSE BUTTON
+================================ */
 
 .close-modal {
     position: absolute;
@@ -275,7 +306,10 @@ body {
     transform: rotate(90deg);
 }
 
-/* Description */
+
+/* ==============================
+   DESCRIPTION
+================================ */
 
 .image-modal p {
     margin-top: 15px;
@@ -285,7 +319,10 @@ body {
     font-size: 12px;
 }
 
-/* Animation */
+
+/* ==============================
+   ANIMATION
+================================ */
 
 @keyframes imageZoom {
 
@@ -301,12 +338,28 @@ body {
 
 }
 
-/* Mobile */
+
+/* ==============================
+   MOBILE
+================================ */
 
 @media (max-width: 500px) {
 
+    .photo-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .photo-container img {
+        width: 300px;
+        height: 300px;
+    }
+
     .image-modal img {
-        max-width: 95%;
+        width: 90vw;
+        height: 90vw;
+
+        max-width: 90vw;
         max-height: 70vh;
     }
 
@@ -316,7 +369,6 @@ body {
 
         font-size: 38px;
     }
-
 }
 
 /* ==============================
