@@ -191,48 +191,132 @@ body {
 }
 
 /* ==============================
-   PROFILE
+   CLICKABLE PROFILE PHOTO
 ================================ */
 
-.profile-section {
-    display: flex;
-    flex-direction: column;
+.photo-container {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-container:hover {
+    transform: scale(1.05);
+}
+
+/* ==============================
+   IMAGE MODAL
+================================ */
+
+.image-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    justify-content: center;
     align-items: center;
 
-    margin-top: 30px;
+    flex-direction: column;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.88);
+
+    backdrop-filter: blur(8px);
 }
 
-.photo-container {
-    width: 150px;
-    height: 150px;
+.image-modal.active {
+    display: flex;
+}
 
-    padding: 5px;
+/* Enlarged Image */
 
-    border-radius: 20px;
+.image-modal img {
+    max-width: 90%;
+    max-height: 80vh;
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--accent),
-            transparent,
-            var(--accent-dark)
-        );
+    object-fit: contain;
+
+    border-radius: 15px;
+
+    border: 3px solid rgba(255, 255, 255, 0.8);
 
     box-shadow:
-        0 10px 35px rgba(0, 217, 255, 0.15);
+        0 20px 60px rgba(0, 0, 0, 0.6);
+
+    animation: imageZoom 0.3s ease;
 }
 
-.profile-picture {
-    width: 100%;
-    height: 100%;
+/* Close Button */
 
-    display: block;
+.close-modal {
+    position: absolute;
 
-    object-fit: cover;
+    top: 25px;
+    right: 35px;
 
-    border-radius: 16px;
+    color: white;
 
-    background: #222;
+    font-size: 45px;
+
+    font-weight: 300;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #00d9ff;
+
+    transform: rotate(90deg);
+}
+
+/* Description */
+
+.image-modal p {
+    margin-top: 15px;
+
+    color: #c5ccd8;
+
+    font-size: 12px;
+}
+
+/* Animation */
+
+@keyframes imageZoom {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .image-modal img {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+
+    .close-modal {
+        top: 15px;
+        right: 20px;
+
+        font-size: 38px;
+    }
+
 }
 
 /* ==============================
