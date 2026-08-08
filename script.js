@@ -80,65 +80,6 @@ dateButton.addEventListener("click", function () {
 
 });
 
-/* ==============================
-   CLICKABLE PROFILE PHOTO
-================================ */
-
-const profilePicture =
-    document.getElementById("profilePicture");
-
-const imageModal =
-    document.getElementById("imageModal");
-
-const closeModal =
-    document.getElementById("closeModal");
-
-const modalImage =
-    document.getElementById("modalImage");
-
-
-/* Open Image */
-
-profilePicture.addEventListener("click", function () {
-
-    imageModal.classList.add("active");
-
-});
-
-
-/* Close using X */
-
-closeModal.addEventListener("click", function () {
-
-    imageModal.classList.remove("active");
-
-});
-
-
-/* Close when clicking outside image */
-
-imageModal.addEventListener("click", function (event) {
-
-    if (event.target === imageModal) {
-
-        imageModal.classList.remove("active");
-
-    }
-
-});
-
-
-/* Close with ESC key */
-
-document.addEventListener("keydown", function (event) {
-
-    if (event.key === "Escape") {
-
-        imageModal.classList.remove("active");
-
-    }
-
-});
 
 /* ==============================
    CARD CLICK ANIMATION
