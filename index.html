@@ -34,37 +34,22 @@
             </header>
 
             <!-- Profile -->
-<div class="profile-section">
+            <div class="profile-section">
 
-    <div class="photo-container">
-        <img
-            src="plr.png"
-            alt="2x2 profile picture"
-            class="profile-picture"
-            id="profilePicture"
-        >
-    </div>
+                <div class="photo-container">
+                    <img
+                        src="plr.png"
+                        alt="2x2 profile picture"
+                        class="profile-picture"
+                    >
+                </div>
 
-    <div class="status">
-        <span class="status-dot"></span>
-        ACTIVE STUDENT
-    </div>
+                <div class="status">
+                    <span class="status-dot"></span>
+                    ACTIVE STUDENT
+                </div>
 
-</div>
-
-<!-- Profile Image -->
-<div class="image-modal" id="imageModal">
-
-    <span class="close-modal" id="closeModal">&times;</span>
-
-    <img
-        src="plr.png"
-        alt="Profile picture"
-        id="modalImage"
-        >
-    <p>Click anywhere outside the photo to close</p>
-
-</div>
+            </div>
 
             <!-- Information -->
             <div class="information">
@@ -106,6 +91,44 @@
             <!-- ID Footer -->
             <footer class="id-footer">
 
+                <div>
+                    <span class="footer-label">IDENTIFICATION</span>
+                    <strong>ONLINE STUDENT ID</strong>
+                </div>
+
+                <div class="qr-placeholder">
+                    ID
+                </div>
+
+            </footer>
+
+        </section>
+
+        <!-- Buttons -->
+        <div class="controls">
+
+            <button id="themeButton">
+                🌙 Dark Mode
+            </button>
+
+            <button id="dateButton">
+                📅 Show Date
+            </button>
+
+        </div>
+
+        <p id="dateDisplay" class="date-display"></p>
+
+        <p class="copyright">
+            © <span id="year"></span> Your Name
+        </p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
                 <div>
                     <span class="footer-label">IDENTIFICATION</span>
                     <strong>ONLINE STUDENT ID</strong>
