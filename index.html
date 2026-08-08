@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Personal Online Student ID">
+    <meta name="author" content="Your Name">
+
+    <title>Online Student ID | Your Name</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section class="id-card">
+
+            <!-- Decorative background -->
+            <div class="card-glow"></div>
+
+            <!-- Header -->
+            <header class="id-header">
+                <div class="school-logo">
+                    CDM
+                </div>
+
+                <div class="header-text">
+                    <h1>STUDENT ID</h1>
+                    <p>ONLINE IDENTIFICATION CARD</p>
+                </div>
+            </header>
+
+            <!-- Profile -->
+            <div class="profile-section">
+
+                <div class="photo-container">
+                    <img
+                        src="profile.jpg"
+                        alt="2x2 profile picture"
+                        class="profile-picture"
+                    >
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    ACTIVE STUDENT
+                </div>
+
+            </div>
+
+            <!-- Information -->
+            <div class="information">
+
+                <div class="info-item">
+                    <span class="label">FULL NAME</span>
+                    <span class="value" id="studentName">
+                        Poloyapoy Lito Ranes
+                    </span>
+                </div>
+
+                <div class="info-row">
+
+                    <div class="info-item">
+                        <span class="label">AGE</span>
+                        <span class="value" id="studentAge">
+                            21
+                        </span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="label">PROGRAM & YEAR</span>
+                        <span class="value">
+                            BSIT - 3rd Year
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="info-item">
+                    <span class="label">SCHOOL</span>
+                    <span class="value">
+                        Colegio de Montalban
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- ID Footer -->
+            <footer class="id-footer">
+
+                <div>
+                    <span class="footer-label">IDENTIFICATION</span>
+                    <strong>ONLINE STUDENT ID</strong>
+                </div>
+
+                <div class="qr-placeholder">
+                    ID
+                </div>
+
+            </footer>
+
+        </section>
+
+        <!-- Buttons -->
+        <div class="controls">
+
+            <button id="themeButton">
+                🌙 Dark Mode
+            </button>
+
+            <button id="dateButton">
+                📅 Show Date
+            </button>
+
+        </div>
+
+        <p id="dateDisplay" class="date-display"></p>
+
+        <p class="copyright">
+            © <span id="year"></span> PLR
+        </p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
